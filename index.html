@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perbandingan Produk Obat Konstipasi</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+        body{
+            font-family: "Poppins", sans-serif;
+        }
+    </style>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+<body class="bg-slate-100">
+    <header class="flex flex-col gap-4 bg-green-600 items-center p-14 text-white">
+        <h1 class="text-5xl uppercase font-bold">
+            Produk Obat Konstipasi
+        </h1>
+        <p class="text-xl font-medium">
+            Pilih produk tepat dengan keunggulan utama dalam mengatasi konstipasi
+        </p>
+    </header>
+    <!-- Carousel -->
+    <div class="h-[70vh] flex justify-center items-center overflow-x-scroll gap-7">
+        <!-- Produk 1 -->
+        <div class="bg-white rounded-xl p-6 flex flex-row gap-4 min-w-[50rem] w-[50rem] max-w-[50rem]">
+            <!-- Gambar Produk -->
+            <div class="aspect-square min-w-80 max-w-80 rounded-md">
+                <img src="images/Microlax.jpg" alt="" class="w-full h-full object-cover rounded-md">
+            </div>
+            <div class="w-[32rem] flex flex-col gap-3">
+                <!-- Judul -->
+                <div class="flex flex-col gap-2 align-middle">
+                    <h1 class="text-4xl font-bold">Microlax</h1>
+                    <div class="flex flex-row gap-3 items-center align-middle">
+                        <div class="w-10 h-10 bg-green-600 rounded-full border-4 border-black"></div>
+                        <p class="text-md font-medium text-green-600">Obat Bebas</p>
+                    </div>
+                </div>
+                <!-- Harga dan Sedian -->
+                <div class="">
+                    <p class="font-semibold">Rp. 23.800,00</p>
+                    <p>Bentuk Sediaan : <span class="font-bold">Enema</span></p>
+                </div>
+                <!-- Indikasi -->
+                <div class="w-full text-md h-24">
+                    <p class="font-bold">Indikasi :</p>
+                    <p>Dikontraindikasikan pada pasien dengan pendarahan rectume, penyakit ginjal, diet restriksi Na, mual, muntah dan nyeri</p>
+                </div>
+                <!-- Button -->
+                <div class="flex flex-row w-full h-11 gap-3">
+                    <button class="w-full bg-white border-3 border-green-600 text-green-600 font-bold rounded-lg hover:bg-green-600 hover:text-white  duration-300 ease-in-out">Tentang Obat</button>
+                    <button class="w-full bg-white border-3 border-green-600 text-green-600 font-bold rounded-lg hover:bg-green-600 hover:text-white  duration-300 ease-in-out">Dosis & Penggunaan</button>
+                </div>
+            </div>
+        </div>
+
+        
+    </div>
+    <!-- Footer -->
+    <div>
+
+    </div>
+
+
+    <script src="index.js"></script>
+</body>
+</html>
