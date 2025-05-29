@@ -1,17 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Perbandingan Produk Obat Konstipasi</title>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
-        body{
+
+        body {
             font-family: "Poppins", sans-serif;
         }
     </style>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 </head>
+
 <body class="bg-slate-100">
     <header class="flex flex-col gap-4 bg-green-600 items-center p-14 text-white">
         <h1 class="text-5xl uppercase font-bold">
@@ -22,9 +26,11 @@
         </p>
     </header>
     <!-- Carousel -->
-    <div class="h-[70vh] flex justify-center items-center overflow-x-scroll gap-7">
+    
+    <div class="h-[70vh] flex justify-center items-center mySwiper scroller">
         <!-- Produk 1 -->
-        <div class="bg-white rounded-xl p-6 flex flex-row gap-4 min-w-[50rem] w-[50rem] max-w-[50rem]">
+        <div id="produk1"
+            class="bg-white rounded-xl p-6 flex flex-row gap-4 min-w-[50rem] w-[50rem] max-w-[50rem] shadow-md">
             <!-- Gambar Produk -->
             <div class="aspect-square min-w-80 max-w-80 rounded-md">
                 <img src="images/Microlax.jpg" alt="" class="w-full h-full object-cover rounded-md">
@@ -46,24 +52,290 @@
                 <!-- Indikasi -->
                 <div class="w-full text-md h-24">
                     <p class="font-bold">Indikasi :</p>
-                    <p>Dikontraindikasikan pada pasien dengan pendarahan rectume, penyakit ginjal, diet restriksi Na, mual, muntah dan nyeri</p>
+                    <p>Mengatasi susah buang air besar/BAB (sembelit) </p>
                 </div>
                 <!-- Button -->
                 <div class="flex flex-row w-full h-11 gap-3">
-                    <button class="w-full bg-white border-3 border-green-600 text-green-600 font-bold rounded-lg hover:bg-green-600 hover:text-white  duration-300 ease-in-out">Tentang Obat</button>
-                    <button class="w-full bg-white border-3 border-green-600 text-green-600 font-bold rounded-lg hover:bg-green-600 hover:text-white  duration-300 ease-in-out">Dosis & Penggunaan</button>
+                    <button id="tentangBtn1"
+                        class="w-full bg-white border-3 border-green-600 text-green-600 font-bold rounded-lg hover:bg-green-600 hover:text-white  duration-300 ease-in-out">Tentang
+                        Obat</button>
+                    <button id="dosisBtn1"
+                        class="w-full bg-white border-3 border-green-600 text-green-600 font-bold rounded-lg hover:bg-green-600 hover:text-white  duration-300 ease-in-out">Dosis
+                        & Penggunaan</button>
                 </div>
             </div>
         </div>
 
-        
+        <!-- Produk 2 -->
+        <div id="produk2"
+            class="bg-white rounded-xl p-6 flex flex-row gap-4 min-w-[50rem] w-[50rem] max-w-[50rem] shadow-md">
+            <!-- Gambar Produk -->
+            <div class="aspect-square min-w-80 max-w-80 rounded-md">
+                <img src="images/Lactulax.jpg" alt="" class="w-full h-full object-cover rounded-md">
+            </div>
+            <div class="w-[32rem] flex flex-col gap-3">
+                <!-- Judul -->
+                <div class="flex flex-col gap-2 align-middle">
+                    <h1 class="text-4xl font-bold">Lactulax</h1>
+                    <div class="flex flex-row gap-3 items-center align-middle">
+                        <div class="w-10 h-10 bg-green-600 rounded-full border-4 border-black"></div>
+                        <p class="text-md font-medium text-green-600">Obat Bebas</p>
+                    </div>
+                </div>
+                <!-- Harga dan Sedian -->
+                <div class="">
+                    <p class="font-semibold">Rp. 66.500,00</p>
+                    <p>Bentuk Sediaan : <span class="font-bold">Sirup</span></p>
+                </div>
+                <!-- Indikasi -->
+                <div class="w-full text-md h-24">
+                    <p class="font-bold">Indikasi :</p>
+                    <p>Konstipasi kronis. Ensefalopati portal-sistemik, termasuk keadaan pre-koma hepatik dan koma hepatik</p>
+                </div>
+                <!-- Button -->
+                <div class="flex flex-row w-full h-11 gap-3">
+                    <button id="tentangBtn2"
+                        class="w-full bg-white border-3 border-green-600 text-green-600 font-bold rounded-lg hover:bg-green-600 hover:text-white  duration-300 ease-in-out">Tentang
+                        Obat</button>
+                    <button id="dosisBtn2"
+                        class="w-full bg-white border-3 border-green-600 text-green-600 font-bold rounded-lg hover:bg-green-600 hover:text-white  duration-300 ease-in-out">Dosis
+                        & Penggunaan</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Overlay 1 -->
+    <div id="o-obat1"
+        class="fixed inset-0 z-50 flex items-center justify-center pointer-events-none transition-all duration-300 ease-in-out opacity-0">
+        <!-- Background semi transparan -->
+        <div class="absolute inset-0 bg-black opacity-0 transition-opacity duration-300 ease-in-out"></div>
+
+        <!-- Konten overlay -->
+        <div class="relative z-10 transform scale-95 transition-all duration-300 ease-in-out"
+            onclick="event.stopPropagation();">
+            <div class="flex gap-5 max-h-fit">
+                <!-- Kiri -->
+                <div class="flex flex-col gap-5 max-w-64 min-w-64">
+                    <div class="bg-white rounded-md overflow-hidden shadow-md">
+                        <div class="flex w-full bg-green-600 text-white font-bold text-lg justify-center p-2">Zat Aktif
+                        </div>
+                        <div class="flex justify-center items-center text-sm p-3 min-h-36 max-h-36">
+                            <ul class="list-disc pl-4">
+                                <li>Natrium laurilsulfoasetat 45 mg</li>
+                                <li>Na Citrate 450 mg</li>
+                                <li>Sorbic Acid 5 mg</li>
+                                <li>Sorbitol 4.465 mg</li>
+                                <li>PEG-400 625 mg</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="bg-white rounded-md overflow-hidden shadow-md">
+                        <div class="flex w-full bg-green-600 text-white font-bold text-lg justify-center p-2">Efek
+                            Samping Obat</div>
+                        <div class="flex items-center text-sm p-3 min-h-48 max-h-48">
+                            <ul class="list-disc pl-4">
+                                <li>Diare</li>
+                                <li>Kekurangan Cairan</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <!-- Kanan -->
+                <div
+                    class="bg-white rounded-md overflow-hidden flex flex-col max-w-64 min-w-64 min-h-full max-h-full shadow-md">
+                    <div class="flex w-full bg-green-600 text-white font-bold text-lg justify-center p-2">Mekanisme
+                        Kerja Obat</div>
+                    <div class="flex items-center text-sm px-3 min-h-[408px]">
+                        <ul class="list-disc pl-4">
+                            <li>Menurunkan tegangan (kekerasan) permukaan feses/tinja</li>
+                            <li>Menyerap air ke dalam usus besar secara bersamaan sehingga feses menjadi lembek/lunak</li>
+                            <li>Melumasi rektum (bagian akhir dari usus besar) agar feses lebih mudah dikeluarkan</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="d-obat1"
+        class="fixed inset-0 z-50 flex items-center justify-center pointer-events-none transition-all duration-300 ease-in-out opacity-0">
+        <!-- Background semi transparan -->
+        <div class="absolute inset-0 bg-black opacity-0 transition-opacity duration-300 ease-in-out"></div>
+
+        <!-- Konten overlay -->
+        <div class="relative z-10 transform scale-95 transition-all duration-300 ease-in-out"
+            onclick="event.stopPropagation();">
+            <div class="flex gap-5 max-h-fit">
+                <div class="flex gap-5">
+                    <div class="bg-white rounded-md overflow-hidden max-w-64 min-w-64">
+                        <div class="flex w-full bg-green-600 text-white font-bold text-lg justify-center p-2 ">Dosis
+                        </div>
+                        <div class="flex flex-col justify-center items-center text-sm p-3 min-h-[300px] max-h-[300px]">
+                            <p>Dewasa dan anak diatas 3 tahun : 1 tube</p>
+                        </div>
+                    </div>
+                    <div class="bg-white rounded-md overflow-hidden max-w-64 min-w-64">
+                        <div class="flex w-full bg-green-600 text-white font-bold text-lg justify-center p-2 ">Cara
+                            Penggunaan</div>
+                        <div class="flex items-center text-sm p-3 min-h-[300px] max-h-[300px]">
+                            <p>Tekan tube sedikit agar sebagian isi obat keluar. Oleskan pada bagian luar dari pipa/cannula. Masukkan pipa ke dalam anus. Tekan tube tersebut hingga isinya habis keluar. Cabut kembali pipa tanpa melepaskan tekanan pada tube.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="bg-white rounded-md overflow-hidden max-w-64 min-w-64">
+                        <div class="flex w-full bg-red-600 text-white font-bold text-lg justify-center p-2 ">Kontra
+                            Indikasi</div>
+                        <div class="flex items-center text-sm p-3 min-h-[300px] max-h-[300px]">
+                            <p>Jangan digunakan pada penderita penyakit wasir akut dan penderita radang usus besar.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="flex flex-col gap-5">
+                    <div class="bg-white rounded-md overflow-hidden flex flex-col max-w-64 min-w-64 ">
+                        <div class="flex w-full bg-green-600 text-white font-bold text-lg justify-center p-2">Onset
+                        </div>
+                        <div
+                            class="flex items-center text-lg font-bold text-white bg-green-600 px-3 justify-center pb-2">
+                            <p>5-15 menit</p>
+                        </div>
+                    </div>
+                    <div class="bg-white rounded-md overflow-hidden flex flex-col max-w-64 min-w-64 min-h-[244px]">
+                        <div class="flex w-full bg-green-600 text-white font-bold text-lg justify-center p-2">
+                            Penyimpanan</div>
+                        <div class="flex items-center text-sm p-3 min-h-[200px]">
+                            <p>Suhu 15-30 derajat celcius (suhu ruang) dengan wadah tertutup rapat</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Overlay 2 -->
+    <div id="o-obat2"
+        class="fixed inset-0 z-50 flex items-center justify-center pointer-events-none transition-all duration-300 ease-in-out opacity-0">
+        <!-- Background semi transparan -->
+        <div class="absolute inset-0 bg-black opacity-0 transition-opacity duration-300 ease-in-out"></div>
+
+        <!-- Konten overlay -->
+        <div class="relative z-10 transform scale-95 transition-all duration-300 ease-in-out"
+            onclick="event.stopPropagation();">
+            <div class="flex gap-5 max-h-fit">
+                <!-- Kiri -->
+                <div class="flex flex-col gap-5 max-w-64 min-w-64">
+                    <div class="bg-white rounded-md overflow-hidden shadow-md">
+                        <div class="flex w-full bg-green-600 text-white font-bold text-lg justify-center p-2">Zat Aktif
+                        </div>
+                        <div class="flex  items-center text-sm p-3 min-h-36 max-h-36">
+                            <ul class="list-disc pl-4">
+                                <li>Laktulosa 3.335 mg</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="bg-white rounded-md overflow-hidden shadow-md">
+                        <div class="flex w-full bg-green-600 text-white font-bold text-lg justify-center p-2">Efek
+                            Samping Obat</div>
+                        <div class="flex items-center text-sm p-3 min-h-48 max-h-48">
+                            <ul class="list-disc pl-4">
+                                <li>Flatulensi</li>
+                                <li>Mual</li>
+                                <li>Muntah</li>
+                                <li>Diare </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <!-- Kanan -->
+                <div
+                    class="bg-white rounded-md overflow-hidden flex flex-col max-w-64 min-w-64 min-h-full max-h-full shadow-md">
+                    <div class="flex w-full bg-green-600 text-white font-bold text-lg justify-center p-2">Mekanisme
+                        Kerja Obat</div>
+                    <div class="flex items-center text-sm px-3 min-h-[408px]">
+                        <ul class="list-disc pl-4">
+                            <li>Membantu melunakkan feses dan melancarkan buang air besar</li>
+                            <li>Obat ini juga bisa membantu mengurangi racun (amonia) dalam tubuh, terutama pada pasien dengan gangguan hati.
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="d-obat2"
+        class="fixed inset-0 z-50 flex items-center justify-center pointer-events-none transition-all duration-300 ease-in-out opacity-0">
+        <!-- Background semi transparan -->
+        <div class="absolute inset-0 bg-black opacity-0 transition-opacity duration-300 ease-in-out"></div>
+
+        <!-- Konten overlay -->
+        <div class="relative z-10 transform scale-95 transition-all duration-300 ease-in-out"
+            onclick="event.stopPropagation();">
+            <div class="flex gap-5 max-h-fit">
+                <div class="flex gap-5">
+                    <div class="bg-white rounded-md overflow-hidden max-w-64 min-w-64">
+                        <div class="flex w-full bg-green-600 text-white font-bold text-lg justify-center p-2 ">Dosis
+                        </div>
+                        <div class="flex flex-col justify-center items-center text-sm p-3 min-h-[300px] max-h-[300px]">
+                            <ul class="list-disc pl-4">
+                                <li>Dewasa pada kasus berat : 30 ml; kasus sedang : 15-45 ml; kasus ringan : 15 ml</li>
+                                <li>Anak 6-14 tahun : 15 ml </li>
+                                <li>Anak 1-5 tahun : 5-10 ml </li>
+                                <li>Bayi < 1 tahun : 5 ml </li>
+                            </ul>
+                            <p class="pt-1">Untuk koma dan pre-koma hepatik</p>
+                            <ul class="list-disc pl-4">
+                                <li>Dewasa : 10-25 ml</li>
+                                <li>Anak 7-14 tahun : 10 ml</li>
+                                <li>Anak 1-6 tahun : 5-10 ml</li>
+                                <li>Bayi < 1 tahun : 5 ml</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="bg-white rounded-md overflow-hidden max-w-64 min-w-64">
+                        <div class="flex w-full bg-green-600 text-white font-bold text-lg justify-center p-2 ">Cara
+                            Penggunaan</div>
+                        <div class="flex items-center text-sm p-3 min-h-[300px] max-h-[300px]">
+                            <p>Dapat diberikan bersama atau tanpa makanan.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="bg-white rounded-md overflow-hidden max-w-64 min-w-64">
+                        <div class="flex w-full bg-red-600 text-white font-bold text-lg justify-center p-2 ">Kontra
+                            Indikasi</div>
+                        <div class="flex items-center text-sm p-3 min-h-[300px] max-h-[300px]">
+                            <p>Penderita yang hipersensitifitas terhadap komponen obat, galaktosemia, dan obstruksi usus.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="flex flex-col gap-5">
+                    <div class="bg-white rounded-md overflow-hidden flex flex-col max-w-64 min-w-64 ">
+                        <div class="flex w-full bg-green-600 text-white font-bold text-lg justify-center p-2">Onset
+                        </div>
+                        <div
+                            class="flex items-center text-lg font-bold text-white bg-green-600 px-3 justify-center pb-2">
+                            <p>24–48 jam</p>
+                        </div>
+                    </div>
+                    <div class="bg-white rounded-md overflow-hidden flex flex-col max-w-64 min-w-64 min-h-[244px]">
+                        <div class="flex w-full bg-green-600 text-white font-bold text-lg justify-center p-2">
+                            Penyimpanan</div>
+                        <div class="flex items-center text-sm p-3 min-h-[200px]">
+                            <p>Suhu 20-25 derajat Celcius (suhu kamar), hindari paparan sinar matahari langsung.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
     <!-- Footer -->
     <div>
 
     </div>
 
-
     <script src="index.js"></script>
 </body>
+
 </html>
