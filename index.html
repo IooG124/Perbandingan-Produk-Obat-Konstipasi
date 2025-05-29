@@ -179,6 +179,44 @@
                 </div>
             </div>
         </div>
+
+        <!-- Produk 5 -->
+        <div id="produk5"
+            class="bg-white rounded-xl p-6 flex flex-row gap-4 min-w-[50rem] w-[50rem] max-w-[50rem] shadow-md">
+            <!-- Gambar Produk -->
+            <div class="aspect-square min-w-80 max-w-80 rounded-md">
+                <img src="images/Fleet.jpg" alt="" class="w-full h-full object-cover rounded-md">
+            </div>
+            <div class="w-[32rem] flex flex-col gap-3">
+                <!-- Judul -->
+                <div class="flex flex-col gap-2 align-middle">
+                    <h1 class="text-4xl font-bold">Fleet</h1>
+                    <div class="flex flex-row gap-3 items-center align-middle">
+                        <div class="w-10 h-10 bg-blue-700 rounded-full border-4 border-black"></div>
+                        <p class="text-md font-medium text-blue-700">Obat Bebas Terbatas</p>
+                    </div>
+                </div>
+                <!-- Harga dan Sedian -->
+                <div class="">
+                    <p class="font-semibold">Rp. 65.000,00 – 124.100,00</p>
+                    <p>Bentuk Sediaan : <span class="font-bold">Enema</span></p>
+                </div>
+                <!-- Indikasi -->
+                <div class="w-full text-md h-24">
+                    <p class="font-bold">Indikasi :</p>
+                    <p>Meredakan konstipasi</p>
+                </div>
+                <!-- Button -->
+                <div class="flex flex-row w-full h-11 gap-3">
+                    <button id="tentangBtn5"
+                        class="w-full bg-white border-3 border-green-600 text-green-600 font-bold rounded-lg hover:bg-green-600 hover:text-white  duration-300 ease-in-out">Tentang
+                        Obat</button>
+                    <button id="dosisBtn5"
+                        class="w-full bg-white border-3 border-green-600 text-green-600 font-bold rounded-lg hover:bg-green-600 hover:text-white  duration-300 ease-in-out">Dosis
+                        & Penggunaan</button>
+                </div>
+            </div>
+        </div>
     </div>
 
     <!-- Overlay 1 -->
@@ -611,6 +649,112 @@
                             Penyimpanan</div>
                         <div class="flex items-center text-sm p-3 min-h-[200px]">
                             <p>Simpan pada suhu di bawah 30 derajat Celcius (suhu kamar), pada tempat yang sejuk dan kering, serta terlindung dari cahaya matahari langsung.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Overlay 5 -->
+    <div id="o-obat5"
+        class="fixed inset-0 z-50 flex items-center justify-center pointer-events-none transition-all duration-300 ease-in-out opacity-0">
+        <!-- Background semi transparan -->
+        <div class="absolute inset-0 bg-black opacity-0 transition-opacity duration-300 ease-in-out"></div>
+
+        <!-- Konten overlay -->
+        <div class="relative z-10 transform scale-95 transition-all duration-300 ease-in-out"
+            onclick="event.stopPropagation();">
+            <div class="flex gap-5 max-h-fit">
+                <!-- Kiri -->
+                <div class="flex flex-col gap-5 max-w-64 min-w-64">
+                    <div class="bg-white rounded-md overflow-hidden shadow-md">
+                        <div class="flex w-full bg-green-600 text-white font-bold text-lg justify-center p-2">Zat Aktif
+                        </div>
+                        <div class="flex  items-center text-sm p-3 min-h-36 max-h-36">
+                            <ul class="list-disc pl-4">
+                                <li>Sodium biphosphate 19 g</li>
+                                <li>Disodium Phosphate 7g</li> 
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="bg-white rounded-md overflow-hidden shadow-md">
+                        <div class="flex w-full bg-green-600 text-white font-bold text-lg justify-center p-2">Efek
+                            Samping Obat</div>
+                        <div class="flex items-center text-sm p-3 min-h-48 max-h-48">
+                            <ul class="list-disc pl-4">
+                                <li>Hipersensitifitas</li>
+                                <li>Dehidrasi</li>
+                                <li>Hiperfosfatemia</li>
+                                <li>Mual</li>
+                                <li>Muntah</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <!-- Kanan -->
+                <div
+                    class="bg-white rounded-md overflow-hidden flex flex-col max-w-64 min-w-64 min-h-full max-h-full shadow-md">
+                    <div class="flex w-full bg-green-600 text-white font-bold text-lg justify-center p-2">Mekanisme
+                        Kerja Obat</div>
+                    <div class="flex items-center text-sm px-3 min-h-[408px]">
+                        <p>Melancarkan buang air besar dengan menarik air ke dalam usus besar. Hal ini membuat feses menjadi lebih lunak dan mudah dikeluarkan. </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="d-obat5"
+        class="fixed inset-0 z-50 flex items-center justify-center pointer-events-none transition-all duration-300 ease-in-out opacity-0">
+        <!-- Background semi transparan -->
+        <div class="absolute inset-0 bg-black opacity-0 transition-opacity duration-300 ease-in-out"></div>
+
+        <!-- Konten overlay -->
+        <div class="relative z-10 transform scale-95 transition-all duration-300 ease-in-out"
+            onclick="event.stopPropagation();">
+            <div class="flex gap-5 max-h-fit">
+                <div class="flex gap-5">
+                    <div class="bg-white rounded-md overflow-hidden max-w-64 min-w-64">
+                        <div class="flex w-full bg-green-600 text-white font-bold text-lg justify-center p-2 ">Dosis
+                        </div>
+                        <div class="flex flex-col justify-center items-center text-sm p-3 min-h-[300px] max-h-[300px]">
+                            <ul class="list-disc pl-4">
+                                <li>Dewasa dan anak diatas 12 tahun: 1 tube/hari</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="bg-white rounded-md overflow-hidden max-w-64 min-w-64">
+                        <div class="flex w-full bg-green-600 text-white font-bold text-lg justify-center p-2 ">Cara
+                            Penggunaan</div>
+                        <div class="flex items-center text-sm p-3 min-h-[300px] max-h-[300px]">
+                            <p>Posisikan tubuh dalam keadaan jongkok atau berbaring tengkurap, tekan tabung perlahan dan alirkan obat masuk ke dalam rectum. Pertahankan posisi yang sama selama beberapa saat untuk memastikan tidak ada obat yang keluar, kemudian keluarkan ujung tabung Fleet Enema dari anus.</p>
+                        </div>
+                    </div>
+                    <div class="bg-white rounded-md overflow-hidden max-w-64 min-w-64">
+                        <div class="flex w-full bg-red-600 text-white font-bold text-lg justify-center p-2 ">Kontra
+                            Indikasi</div>
+                        <div class="flex items-center text-sm p-3 min-h-[300px] max-h-[300px]">
+                            <p>Dikontraindikasikan pada pasien dengan pendarahan rectume, penyakit ginjal, diet restriksi Na, mual, muntah dan nyeri.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="flex flex-col gap-5">
+                    <div class="bg-white rounded-md overflow-hidden flex flex-col max-w-64 min-w-64 ">
+                        <div class="flex w-full bg-green-600 text-white font-bold text-lg justify-center p-2">Onset
+                        </div>
+                        <div
+                            class="flex items-center text-lg font-bold text-white bg-green-600 px-3 justify-center pb-2">
+                            <p>1-5 menit</p>
+                        </div>
+                    </div>
+                    <div class="bg-white rounded-md overflow-hidden flex flex-col max-w-64 min-w-64 min-h-[244px]">
+                        <div class="flex w-full bg-green-600 text-white font-bold text-lg justify-center p-2">
+                            Penyimpanan</div>
+                        <div class="flex items-center text-sm p-3 min-h-[200px]">
+                            <p>Simpan pada suhu dibawah 25 derajat celsius (suhu kamar), di tempat kering dan terhindar dari cahaya matahari langsung.</p>
                         </div>
                     </div>
                 </div>

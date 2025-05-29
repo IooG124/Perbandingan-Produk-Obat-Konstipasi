@@ -213,3 +213,58 @@ dObat4.addEventListener('click', () => {
     content8.classList.add('scale-95');
     content8.classList.remove('scale-100');
 });
+
+
+
+// Obat 5
+const oObat5 = document.getElementById('o-obat5');
+const background9 = oObat5.querySelector('div.absolute');
+const content9 = oObat5.querySelector('div.relative');
+const obatBtn5 = document.getElementById('tentangBtn5');
+
+obatBtn5.addEventListener('click', () => {
+    oObat5.classList.remove('opacity-0', 'pointer-events-none');
+    oObat5.classList.add('opacity-100', 'pointer-events-auto');
+
+    background9.classList.remove('opacity-0');
+    background9.classList.add('opacity-70');
+
+    content9.classList.remove('scale-95');
+    content9.classList.add('scale-100');
+});
+oObat5.addEventListener('click', () => {
+    oObat5.classList.add('opacity-0', 'pointer-events-none');
+    oObat5.classList.remove('opacity-100', 'pointer-events-auto');
+
+    background9.classList.add('opacity-0');
+    background9.classList.remove('opacity-70');
+
+    content9.classList.add('scale-95');
+    content9.classList.remove('scale-100');
+});
+
+const dObat5 = document.getElementById('d-obat5');
+const background10 = dObat5.querySelector('div.absolute');
+const content10 = dObat5.querySelector('div.relative');
+const dosisBtn5 = document.getElementById('dosisBtn5');
+
+dosisBtn5.addEventListener('click', () => {
+    dObat5.classList.remove('opacity-0', 'pointer-events-none');
+    dObat5.classList.add('opacity-100', 'pointer-events-auto');
+
+    background10.classList.remove('opacity-0');
+    background10.classList.add('opacity-70');
+
+    content10.classList.remove('scale-95');
+    content10.classList.add('scale-100');
+});
+dObat5.addEventListener('click', () => {
+    dObat5.classList.add('opacity-0', 'pointer-events-none');
+    dObat5.classList.remove('opacity-100', 'pointer-events-auto');
+
+    background10.classList.add('opacity-0');
+    background10.classList.remove('opacity-70');
+
+    content10.classList.add('scale-95');
+    content10.classList.remove('scale-100');
+});
