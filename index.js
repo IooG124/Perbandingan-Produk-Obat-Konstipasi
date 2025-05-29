@@ -79,14 +79,14 @@ oObat2.addEventListener('click', () => {
     content3.classList.remove('scale-100');
 });
 
-const dObat3 = document.getElementById('d-obat2');
-const background4 = dObat3.querySelector('div.absolute');
-const content4 = dObat3.querySelector('div.relative');
+const dObat2 = document.getElementById('d-obat2');
+const background4 = dObat2.querySelector('div.absolute');
+const content4 = dObat2.querySelector('div.relative');
 const dosisBtn2 = document.getElementById('dosisBtn2');
 
 dosisBtn2.addEventListener('click', () => {
-    dObat3.classList.remove('opacity-0', 'pointer-events-none');
-    dObat3.classList.add('opacity-100', 'pointer-events-auto');
+    dObat2.classList.remove('opacity-0', 'pointer-events-none');
+    dObat2.classList.add('opacity-100', 'pointer-events-auto');
 
     background4.classList.remove('opacity-0');
     background4.classList.add('opacity-70');
@@ -94,9 +94,9 @@ dosisBtn2.addEventListener('click', () => {
     content4.classList.remove('scale-95');
     content4.classList.add('scale-100');
 });
-dObat3.addEventListener('click', () => {
-    dObat3.classList.add('opacity-0', 'pointer-events-none');
-    dObat3.classList.remove('opacity-100', 'pointer-events-auto');
+dObat2.addEventListener('click', () => {
+    dObat2.classList.add('opacity-0', 'pointer-events-none');
+    dObat2.classList.remove('opacity-100', 'pointer-events-auto');
 
     background4.classList.add('opacity-0');
     background4.classList.remove('opacity-70');
@@ -106,40 +106,110 @@ dObat3.addEventListener('click', () => {
 });
 
 
+// Obat 3
+const oObat3 = document.getElementById('o-obat3');
+const background5 = oObat3.querySelector('div.absolute');
+const content5 = oObat3.querySelector('div.relative');
+const obatBtn3 = document.getElementById('tentangBtn3');
+
+obatBtn3.addEventListener('click', () => {
+    oObat3.classList.remove('opacity-0', 'pointer-events-none');
+    oObat3.classList.add('opacity-100', 'pointer-events-auto');
+
+    background5.classList.remove('opacity-0');
+    background5.classList.add('opacity-70');
+
+    content5.classList.remove('scale-95');
+    content5.classList.add('scale-100');
+});
+oObat3.addEventListener('click', () => {
+    oObat3.classList.add('opacity-0', 'pointer-events-none');
+    oObat3.classList.remove('opacity-100', 'pointer-events-auto');
+
+    background5.classList.add('opacity-0');
+    background5.classList.remove('opacity-70');
+
+    content5.classList.add('scale-95');
+    content5.classList.remove('scale-100');
+});
+
+const dObat3 = document.getElementById('d-obat3');
+const background6 = dObat3.querySelector('div.absolute');
+const content6 = dObat3.querySelector('div.relative');
+const dosisBtn3 = document.getElementById('dosisBtn3');
+
+dosisBtn3.addEventListener('click', () => {
+    dObat3.classList.remove('opacity-0', 'pointer-events-none');
+    dObat3.classList.add('opacity-100', 'pointer-events-auto');
+
+    background6.classList.remove('opacity-0');
+    background6.classList.add('opacity-70');
+
+    content6.classList.remove('scale-95');
+    content6.classList.add('scale-100');
+});
+dObat3.addEventListener('click', () => {
+    dObat3.classList.add('opacity-0', 'pointer-events-none');
+    dObat3.classList.remove('opacity-100', 'pointer-events-auto');
+
+    background6.classList.add('opacity-0');
+    background6.classList.remove('opacity-70');
+
+    content6.classList.add('scale-95');
+    content6.classList.remove('scale-100');
+});
 
 
 
-// const swiper2 = new Swiper(".mySwiper", {
-//         loop: true,
-//         navigation: {
-//             nextEl: "nextBtn",
-//             prevEl: "prevBtn",
-//         },
+// Obat 4
+const oObat4 = document.getElementById('o-obat4');
+const background7 = oObat4.querySelector('div.absolute');
+const content7 = oObat4.querySelector('div.relative');
+const obatBtn4 = document.getElementById('tentangBtn4');
 
-//         breakpoints: {
-//             320: {
-//                 slidesPerView: 1,
-//                 spaceBetween: 10,
-//             },
-//             425: {
-//                 slidesPerView: 1,
-//                 spaceBetween: 10,
-//             },
-//             768: {
-//                 slidesPerView: 1,
-//                 spaceBetween: 10,
-//             },
-//             1024: {
-//                 slidesPerView: 1,
-//                 spaceBetween: 10,
-//             },
-//             1280: {
-//                 slidesPerView: 1,
-//                 spaceBetween: 10,
-//             },
-//             1440: {
-//                 slidesPerView: 1,
-//                 spaceBetween: 10,
-//             },
-//         }
-//     });
+obatBtn4.addEventListener('click', () => {
+    oObat4.classList.remove('opacity-0', 'pointer-events-none');
+    oObat4.classList.add('opacity-100', 'pointer-events-auto');
+
+    background7.classList.remove('opacity-0');
+    background7.classList.add('opacity-70');
+
+    content7.classList.remove('scale-95');
+    content7.classList.add('scale-100');
+});
+oObat4.addEventListener('click', () => {
+    oObat4.classList.add('opacity-0', 'pointer-events-none');
+    oObat4.classList.remove('opacity-100', 'pointer-events-auto');
+
+    background7.classList.add('opacity-0');
+    background7.classList.remove('opacity-70');
+
+    content7.classList.add('scale-95');
+    content7.classList.remove('scale-100');
+});
+
+const dObat4 = document.getElementById('d-obat4');
+const background8 = dObat4.querySelector('div.absolute');
+const content8 = dObat4.querySelector('div.relative');
+const dosisBtn4 = document.getElementById('dosisBtn4');
+
+dosisBtn4.addEventListener('click', () => {
+    dObat4.classList.remove('opacity-0', 'pointer-events-none');
+    dObat4.classList.add('opacity-100', 'pointer-events-auto');
+
+    background8.classList.remove('opacity-0');
+    background8.classList.add('opacity-70');
+
+    content8.classList.remove('scale-95');
+    content8.classList.add('scale-100');
+});
+dObat4.addEventListener('click', () => {
+    dObat4.classList.add('opacity-0', 'pointer-events-none');
+    dObat4.classList.remove('opacity-100', 'pointer-events-auto');
+
+    background8.classList.add('opacity-0');
+    background8.classList.remove('opacity-70');
+
+    content8.classList.add('scale-95');
+    content8.classList.remove('scale-100');
+});
